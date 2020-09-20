@@ -18,7 +18,7 @@ and invoke obs_midi-obsws.py <Request> <datatring>
 
 python will parse all scene with sources named "MIDI_*" and will send the request to them.
 
-### last minute: There's is a bug in obs-websockets that prevent item visibility to be updated if they are not part of the active scene....
+### last minute: There's is a bug in obs-websockets that prevent items visibility to be updated if they are not part of the active scene... Issue opened
 
 AppleScript code ex:
 
