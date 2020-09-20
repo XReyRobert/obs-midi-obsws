@@ -12,7 +12,7 @@ My trick:
 
 Make a groupe named "MIDI_{channel}_{Data1}_{Data2}" put the sources you wanna act on from AppleScript in it.
 
-in Applescript setup a datastring according to the [obs-websocket protoco]l(https://github.com/Palakis/obs-websocket/blob/4.x-current/docs/generated/protocol.md#getscenelist)
+in Applescript setup a datastring according to the [obs-websocket protoco](https://github.com/Palakis/obs-websocket/blob/4.x-current/docs/generated/protocol.md#getscenelist)
 
 and invoke obs_midi-obsws.py <Request> <datatring>
 
