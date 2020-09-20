@@ -23,23 +23,24 @@ python will parse all scene with sources named "MIDI_*" and will send the reques
 AppleScript code ex:
 
 ```
-property fromChannel : 1
-property toChannel : 12
 
-on runme(message)
+set data1 to item 1 of message # Command (ex 144 : Note On)
+set data2 to item 2 of message # Data Byte 1
 
-set data1 to item 1 of message
-set data2 to item 2 of message
+# item 3 of message = velocity
+
+#make visible
 if item 3 of message > 0 
 	set datastring to "'{\"source\": \"MIDI_1_"& data1 & "_" & data2 & "\", \"render\": true}'"
 end if
 
+#make hidden
 if item 3 of message = 0 
 	set datastring to "'{\"source\": \"MIDI_1_"& data1 & "_" & data2 & "\", \"render\": false}'"
 end if
+
 do shell script "~/.pyenv/shims/python3 ~/obs-midi-obsws/obs_midi-obsws.py SetSceneItemRender " & datastring
 
-end runme
 ```
 
 
